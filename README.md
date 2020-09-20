@@ -17,7 +17,7 @@ and on git:
 ```
 source env/bin/active
 ```
-if their is error like ** scripts is enable in this system ** then you need to follow the following steps
+if their is error like **scripts is enable in this system** then you need to follow the following steps
 <br>
 ### HOW TO ENABLE SCRIPTS ?
 
