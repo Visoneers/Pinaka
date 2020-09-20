@@ -17,23 +17,29 @@ and on git:
 ```
 source env/bin/active
 ```
-if their is error like " scripts is enable in this system " then you need to follow the following steps
-
+if their is error like ** scripts is enable in this system ** then you need to follow the following steps
+<br>
 ### HOW TO ENABLE SCRIPTS ?
-Step 1: Open PowerShell (if you are running PowerShell on Windows Vista, right-click your PowerShell icon and select
-Run as administrator. If you don’t do this, you will not be able to enable script support).
-Step 2: Check the current script execution policy by using the ``` Get-ExecutionPolicy ``` comand copy and 
-            paste in PowerSell and press Enter on your keyboard. PowerShell will return a value of ``` Restricted ```.
-Step 3: To change the script execution policy, use the ``` Set-ExecutionPolicy unrestricted ``` comand and press 
-            Enter on your keyboard. 
-Step 4: To ensure that the script execution policy has been changed, use the ``` Get-ExecutionPolicy ``` comand 
-            again. PowerShell should return a value of ``` Unrestricted ```
 
-Then install the project dependencies with
+1. Open PowerShell (if you are running PowerShell on Windows Vista, right-click your PowerShell icon and select
+Run as administrator. If you don’t do this, you will not be able to enable script support).
+
+2. Check the current script execution policy by using the ``` Get-ExecutionPolicy ``` comand copy and 
+paste in PowerSell and press Enter on your keyboard. PowerShell will return a value of ``` Restricted ```.
+
+3. To change the script execution policy, use the ``` Set-ExecutionPolicy unrestricted ``` comand and press 
+Enter on your keyboard. 
+
+3. To ensure that the script execution policy has been changed, use the " Get-ExecutionPolicy " comand 
+again. PowerShell should return a value of ``` Unrestricted ```.
+<br>
+Then install the project dependencies with All the required library are mentioned in requirements.txt
+We can use requirements.txt to install library using command
 
 ```
 pip install -r requirements.txt
 ```
+this will install all the library mentioned.
 
 Now you can run the project with this command
 
@@ -42,8 +48,9 @@ python manage.py runserver
 ```
 
 **Note** if you want payments to work you will need to enter your own Stripe API keys into the `.env` file in the settings files.
-
+<br>
 ## How to use virtual environment :  
+
 install virtual environment
 ```
 pip install virtualenv <name>
@@ -60,29 +67,6 @@ To activate virtual environment Script
 ```
 if their is error like  ** scripts is enable in this system  ** then you need to follow the following steps
 
-## HOW TO ENABLE SCRIPTS ?
-1.Step 1: Open PowerShell (if you are running PowerShell on Windows Vista, right-click your PowerShell icon and select
-Run as administrator. If you don’t do this, you will not be able to enable script support).
-
-2.Step 2: Check the current script execution policy by using the ``` Get-ExecutionPolicy ``` comand copy and 
-paste in PowerSell and press Enter on your keyboard. PowerShell will return a value of ``` Restricted ```.
-
-3.Step 3: To change the script execution policy, use the ``` Set-ExecutionPolicy unrestricted ``` comand and press 
-Enter on your keyboard. 
-
-3.Step 4: To ensure that the script execution policy has been changed, use the " Get-ExecutionPolicy " comand 
-again. PowerShell should return a value of ``` Unrestricted ```.
-
-<br>
-
-# Libraries :
->> All the required library are mentioned in requirements.txt
->> We can use requirements.txt to install library using command 
-
-```
-pip install -r requirements.txt 
-``` 
-this will install all the library mentioned.
 
 
 
