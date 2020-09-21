@@ -1,7 +1,7 @@
 
 
 ## Running this project
-To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
+To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately.
 ```
 pip install virtualenv
 ```
@@ -48,24 +48,8 @@ python manage.py runserver
 ```
 
 **Note** if you want payments to work you will need to enter your own Stripe API keys into the `.env` file in the settings files.
-<br>
-## How to use virtual environment :  
 
-install virtual environment
-```
-pip install virtualenv <name>
-```
 
-To setup virtual environment we need to run script (command) 
-```
-virtualenv <name>
-``` 
-and press enter this will create virtual environment 
-To activate virtual environment Script 
-```
-./<virtual environment name >/Scripts/Activate
-```
-if their is error like  ** scripts is enable in this system  ** then you need to follow the following steps
 
 
 

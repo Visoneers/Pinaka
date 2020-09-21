@@ -1,0 +1,49 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Helvetica";
+}
+/*------------------- Global --------------------------------*/
+a{
+    text-decoration: none;
+    color: black;
+}
+a ion-icon {
+   font-size: 25px;
+   padding-right: 0.5rem;
+}
+
+/*-------------------Navigation Menu --------------------------------*/
+  
+.navigation{
+    font-size: 1.7rem;
+    padding: 0.8rem 6rem;
+    min-height: 2vh;
+    overflow: hidden;
+}
+.navigation .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navigation .nav-menu{
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+.navigation .nav-menu a{
+    padding: 0rem 1.2rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+#cart-total{
+    display: block;
+    position: absolute;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0.4rem 86rem;
+}
+ 
