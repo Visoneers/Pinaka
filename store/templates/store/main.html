@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Pinaka-Fashion Hub</title>
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}">
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </head>
@@ -20,13 +20,13 @@
                     <ul class="nav-menu">
                         <li><a href="{% url 'store' %}">Store</a></li>
                         <li><a href="project.html">Categories</a></li>
-                        <li><a href="about.html">Products</a></li>
+                        <li><a href="product.html">Products</a></li>
                         <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</a></li>
-                    </ul>
-                    
+                        <button type="button" class="btn btn-outline-dark">Login</button>
+                    </ul>    
                 </div>
             </div>
-        </nav>
+         </nav>
     </div>  
     
     <div class="container">
