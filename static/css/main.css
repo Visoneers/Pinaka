@@ -46,4 +46,12 @@ a ion-icon {
     font-weight: bold;
     margin: 0.4rem 86rem;
 }
+
+.box-element{
+	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+	background-color: #fff;
+	border-radius: 4px;
+    padding: 10px;
+    margin: 5rem ;
+}
  
