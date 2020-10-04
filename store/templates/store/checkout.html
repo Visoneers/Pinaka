@@ -1,8 +1,6 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
-
-
      <div class="row">
 		<div class="col-lg-6">
 			<div class="box-element" id="form-wrapper">
@@ -33,26 +31,35 @@
 						<div class="form-field">
 							<input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
 						</div>
-						<div class="form-field">
-							<input class="form-control" type="text" name="country" placeholder="Zip code..">
-						</div>
-
                     </div>
-
                     <hr>
                     <input id="form-button" class="btn btn-success btn-block" type="submit" class="btn btn-outline-primary" value="Continue">
                 </form>    
 			</div>
-			
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+				<!--<button id="make-payment">Make payment</button>-->
+				<div id="paypal-button-container"></div>
+			</div>
         </div>
          
-
-
-
 		<div class="col-lg-6">
 			<div class="box-element">
-
-			</div> 
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+				<hr>
+				<h3>Order Summary</h3>
+				<hr>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'images/placeholder.png' %}"></div>
+					<div style="flex:2"><p>Product name </p></div>
+					<div style="flex:1"><p>$ 302.20</p></div>
+					<div style="flex:1"><p>x2</p></div>
+				</div>
+				<h5>Items: 2</h5>
+				<h5>Total: $400</h5>
+			</div>
 		</div>
 	</div>
+
 {% endblock content %}
