@@ -91,3 +91,44 @@ ion-icon {
         display: none;
     }
 }
+
+.cart-row{
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec ;
+
+}
+
+.row-image{
+    width: 100px;
+}
+
+.quantity{
+    display: inline-block;
+    font-weight: 700;
+    padding-right: 10px;
+
+}
+
+.chg-quantity{
+    width: 12px;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+    transition: 1s;
+
+}
+
+.form-field{
+    width: 250px;
+    display:inline-block;
+    padding: 5px;
+
+}
+
+.hidden{
+    display: none!important;
+
+}
