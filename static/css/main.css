@@ -123,3 +123,8 @@ ion-icon {
     }
 }
 
+.topnav {
+    background-color: rgb(189, 224, 186);
+    overflow: hidden;
+    height: 9.5%;
+}
