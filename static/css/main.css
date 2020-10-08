@@ -36,18 +36,22 @@ ion-icon {
     overflow: hidden;
     margin-block-end: 0em;
     font-weight: bolder;
+    
 }
 .heading p{
     font-size: 0.7rem;
     font-weight: bold;
     letter-spacing: 5px;
     margin-block-start: 0.2em;
+    
 }
 .navigation .nav-menu{
     margin: 0;
     display: flex;
     list-style-type: none;
     font-family: "Demure";
+    
+    
 }
 .navigation .nav-menu a{
     padding: 0rem 1.2rem;
@@ -124,7 +128,7 @@ ion-icon {
 }
 
 .topnav {
-    background-color: rgb(189, 224, 186);
+    background-color: rgba(189, 224, 186, 0.568);
     overflow: hidden;
     height: 9.5%;
 }
