@@ -15,12 +15,20 @@
     <div class="topnav">
         <p id="cart-total">0</p>
         <nav class="navigation">
-         <div class="heading">
+        <div class="heading">
                 <a href="{% url 'store' %}">Pinaka</a>
                 <p>FASHION HUB</p>
-            </div>
+        </div>
             <div>
                 <ul class="nav-menu">
+
+                    <span class="search-box">
+                    <li > <input class="input_box" type="text"  placeholder="Search">
+                        <a class="search-btn" href="#" >
+                            <ion-icon id="search-btn" name="search"></ion-icon>
+                        </a>
+                    </li>
+                   </span>
                     
                     <li><a href="{% url 'store' %}"><strong>Store</strong></a></li>
                     <li><a href="project.html"><strong>Categories</strong></a></li>
