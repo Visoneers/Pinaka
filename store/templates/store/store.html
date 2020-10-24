@@ -16,18 +16,35 @@
         {% endfor %}
 
     </div> -->
-
-{% for product in products %}
-<div class="box-element card">
-    <div class="img">
-        <img src="{{product.image.url}}" alt="Network Problem">
+    
+<div class="product">
+    <div class="box-element card">
+        <div class="img">
+            <img src="{{product.image.url}}" alt="Network Problem">
+        </div>
+        <div class="content">
+            <h1>{{product.name}}</h1>
+            <span class="price">₹{{product.price|floatformat:2}}</span>
+        </div>
     </div>
-    <div class="content">
-        <h1>{{product.name}}</h1>
-        <span class="price">₹{{product.price|floatformat:2}}</span>
-    </div>
+    {% endfor %}
 </div>
-{% endfor %}
+{% for product in products %}
+
+
+<!-- <div class="product">
+    
+    <div class="box-element card">
+        <div class="img">
+            <img src="{% static 'images/black-shearling.png'%}" alt="Network Problem">
+        </div>
+        <div class="content">
+            <h1>shrit</h1>
+            <span class="price">₹{{product.price|floatformat:2}}</span>
+        </div>
+    </div>
+   
+</div> -->
 
 {% endblock content %}
     

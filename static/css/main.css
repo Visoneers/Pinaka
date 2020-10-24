@@ -8,9 +8,9 @@ html, body {
     font-family: "Helvetica";
 }
 /*------------------- Global --------------------------------*/
-a{
-    text-decoration: none;
+a, a:hover{
     color: black;
+    text-decoration: none;
 }
 ion-icon {
    font-size: 20px;
@@ -32,8 +32,6 @@ ion-icon {
     border-radius:3px;
     padding:10px;   
 }
-
-
  .input_box{
     height: 25px;
     background: none;
@@ -47,14 +45,10 @@ ion-icon {
     line-height: 2px;
     width:0px;
     }
-
-
 #search-btn{
     right:0px;
     padding-right:2px;
 }
-
-
 .search-btn{
     top: -7px;
     color: #2a71f5;
@@ -67,30 +61,24 @@ ion-icon {
     text-align: center;
     border-radius: 50%;
 }
-
-
 .search-box:hover .input_box{
     background-color:rgba(255, 255, 255, 0);
     width: 240px;
     padding:0px,0px;
 }
-
-
 .search-box:hover .search-btn{
     background-color: rgba(255, 255, 255, 0);
 }
 
-
-/* xxxxxxx------------search-box-----------xxxxxxx */
-
+/*------x-x-x-------Search-box --------x-x-x----------*/
 
 .navigation{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 0.8rem 6rem;
-    min-height: 2vh;
+    height: 9vh;
     overflow: hidden;
 }
 .navigation .heading{
@@ -98,25 +86,22 @@ ion-icon {
     font-family: "Demure";
     font-size: 1.3rem;
     letter-spacing: 3px;
-    overflow: hidden;
+}
+.heading h1{
+    font-size: 1.8rem;
     margin-block-end: 0em;
-    font-weight: bolder;
-    
 }
 .heading p{
     font-size: 0.7rem;
-    font-weight: bold;
-    letter-spacing: 5px;
-    margin-block-start: 0.2em;
-    
+    letter-spacing: 4.5px;
+    margin-block-start: 0em;
 }
 .navigation .nav-menu{
     margin: 0;
     display: flex;
     list-style-type: none;
     font-family: "Demure";
-    
-    
+
 }
 .navigation .nav-menu a{
     padding: 0rem 1.2rem;
@@ -129,39 +114,38 @@ ion-icon {
     color: red;
     font-size: 14px;
     font-weight: bold;
-    margin: 0.3rem 82rem;
+    margin: 0.3rem 81rem;
 }
 
 /*--------x-x-x---------Navigation Menu ----------x-x-x---------------*/
 
 /*--------------------------- Store ----------------------------------*/
 
-.container{
+.product{
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
     box-sizing: border-box;
     grid-gap: 30px ;
+    justify-items: center;
     width: 100%;
 }
-.container .card{
+.product .card{
     position: relative;
     display: flex;
     width: 351px;
     flex-direction: column;
     transition: 0.3s ease-in-out;
+    padding: 0px;
 }
-.container .card .img{
+.product .card .img{
     position: relative;
     width: 320px;
     height: 440px;
     top: 10px;
     left: 15px;
 }
-.container .card .img img{
+.product .card .img img{
     width: 100%;
     height: 420px;
     border-radius: 4px;
@@ -169,15 +153,18 @@ ion-icon {
 .content{
     display: inline-flex;
     position: relative;
-    padding: 10px;
-    font-size: 1.5rem;
+    padding: 8px;
     align-items: flex-start;
     justify-content: space-between;
 }
+.content h1, .content .price{
+    font-size: 1.6rem;
+} 
 .box-element{
     box-shadow:hsl(0, 0%, 80%) 0 0 16px;
     border-radius: 4px;
-	background-color: #fff;
+    background-color: #fff;
+    padding: 10px;
 }
 
 /*--------x-x-x-------------- Store ----------------x-x-x---------------*/
@@ -234,8 +221,3 @@ ion-icon {
     }
 }
 
-.topnav {
-    background-color: rgba(189, 224, 186, 0.568);
-    overflow: hidden;
-    height: 9.5%;
-}

@@ -15,37 +15,37 @@
 </head>
 <body>
     <!---------------- navigation menu ------------------------>
-    <div class="topnav">
-        <p id="cart-total">0</p>
-        <nav class="navigation">
+    
+    <p id="cart-total">0</p>
+    <nav class="navigation">
         <div class="heading">
-                <a href="{% url 'store' %}">Pinaka</a>
-                <p>FASHION HUB</p>
+            <h1><a href="{% url 'store' %}">Pinaka</a></h1>
+            <p>FASHION HUB</p>
         </div>
-            <div>
-                <ul class="nav-menu">
+        <div>
+            <ul class="nav-menu">
 
-                    <span class="search-box">
-                    <li > <input class="input_box" type="text"  placeholder="Search">
-                        <a class="search-btn" href="#" >
-                            <ion-icon id="search-btn" name="search"></ion-icon>
-                        </a>
-                    </li>
-                   </span>
-                    
-                    <li><a href="{% url 'store' %}"><strong>Store</strong></a></li>
-                    <li><a href="project.html"><strong>Categories</strong></a></li>
-                    <li><a href="product.html"><strong>Products</strong></a></li>
-                    <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon><strong>Cart</strong></ion-icon></a></li>
-                    <button type="button" class="btn btn-primary">Login</button>
+                <span class="search-box">
+                <li > <input class="input_box" type="text"  placeholder="Search">
+                    <a class="search-btn" href="#" >
+                        <ion-icon id="search-btn" name="search"></ion-icon>
+                    </a>
+                </li>
+            </span>
                 
-                </ul> 
-            </div>
-        </nav>
-    </div>  
+                <li><a href="{% url 'store' %}">Store</a></li>
+                <li><a href="project.html">Categories</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
+                <button type="button" class="btn btn-primary">Login</button>
+            
+            </ul> 
+        </div>
+    </nav>
+      
     
     <div class="container">
-        <br>
+        <br><br>
         {% block content %}
        
         {% endblock content %}
