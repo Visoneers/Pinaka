@@ -18,6 +18,7 @@
     </div> -->
     
 <div class="product">
+    {% for product in products %}
     <div class="box-element card">
         <div class="img">
             <img src="{{product.image.url}}" alt="Network Problem">
@@ -29,7 +30,7 @@
     </div>
     {% endfor %}
 </div>
-{% for product in products %}
+
 
 
 <!-- <div class="product">

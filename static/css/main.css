@@ -81,7 +81,7 @@ ion-icon {
     height: 9vh;
     overflow: hidden;
 }
-.navigation .heading{
+.heading{
     display: block;
     font-family: "Demure";
     font-size: 1.3rem;
@@ -114,7 +114,7 @@ ion-icon {
     color: red;
     font-size: 14px;
     font-weight: bold;
-    margin: 0.3rem 81rem;
+    margin: 0.3rem 82rem;
 }
 
 /*--------x-x-x---------Navigation Menu ----------x-x-x---------------*/
@@ -212,12 +212,111 @@ ion-icon {
     display: none!important;
 }
 
+/*--------------------------- Store ----------------------------------*/
 
+footer{
+    background: #f1f1f1;
+    padding: 90px 0;
+  }
+.footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.social-media{
+    margin: 20px 0;
+}
+.social-media a{
+    color: #001a21;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+}
+.social-media a:hover{
+    color: #2a71f5;
+}
+.right-col h1{
+    font-family: "Demure";
+    font-weight: bold;
+    font-size: 26px;
+}
+.right-col p{
+    margin-block-start: 1em;
+}
+.border{
+    width: 100px;
+    height: 4px;
+    background: #2a71f5;
+}
+.newsletter-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.txtb{
+    flex: 1;
+    padding: 15px 35px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 25px;
+    min-width: 260px;
+}
+.button{
+    padding: 15px 35px;
+    font-size: 16px;
+    color: white;
+    background: #2a71f5;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+}
+.button:hover{
+    opacity: .7;
+}
+.page-content{
+    min-height: 100vh;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*--------x-x-x-------------- footer ----------------x-x-x---------------*/
 
-
+@media screen and (max-width:960px) {
+    .footer-container{
+      max-width: 600px;
+    }
+    .right-col{
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .left-col{
+      width: 100%;
+      text-align: center;
+    }
+  }
 @media(max-width: 768px){
     .navigation .nav-menu{
         display: none;
+    }
+    .button{
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
     }
 }
 
