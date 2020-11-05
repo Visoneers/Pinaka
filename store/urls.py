@@ -11,4 +11,4 @@ urlpatterns = [
     path('checkout/', views.checkout, name = "checkout"),
 ]
 
-urlpatterns+= static(settings.MEDIA_URL , document_roots=settings.MEDIA_ROOT) #chk
+#urlpatterns+= static(settings.MEDIA_URL , document_roots=settings.MEDIA_ROOT) #chk
