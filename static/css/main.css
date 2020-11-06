@@ -167,6 +167,7 @@ ion-icon {
     padding: 10px;
 }
 
+
 /*--------x-x-x-------------- Store ----------------x-x-x---------------*/
 
 .thumbnail{
@@ -319,4 +320,8 @@ footer{
         margin-top: 20px;
     }
 }
-
+/* catr btn */
+/* #cart-btn{
+    color: aqua;
+    display:none;
+} */
