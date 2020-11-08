@@ -109,6 +109,7 @@ ion-icon {
     position: relative;
 }
 #cart-total{
+   
     display: block;
     position: absolute;
     color: red;

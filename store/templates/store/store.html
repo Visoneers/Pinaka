@@ -20,14 +20,15 @@
 <div class="product">
     {% for product in products %}
     <div class="box-element card">
+
         <div class="img">
-            <button data-product={{product.id}} data-action="add"  class="btn btn-outline add-btn  update-cart" id="cart-btn" >add to cart</button>
+             <button data-product={{product.id}} data-action="add" class="btn btn-outline add-btn  update-cart" id="cart-btn" >add to cart</button>
             <img src="{{product.imageURL}}" alt="Network Problem">
-            
         </div>
+        
         <div class="content">
             <h1>{{product.name}}</h1>
-            <span class="price">₹{{product.price|floatformat:2}}</span>
+            <span class="price">₹{{product.price|floatformat:2}}</span>   
         </div>
     </div>
     {% endfor %}

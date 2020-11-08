@@ -12,11 +12,30 @@
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main.css' %}">
 
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <script type="text/javascript">var user='{{request.user}}'
+    function getCookie(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		          
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+    var csrftoken = getCookie('csrftoken');
+</script>
 </head>
 <body>
     <!---------------- navigation menu ------------------------>
     
-    <p id="cart-total">0</p>
+    <p id="cart-total">{{cartItems}}</p>
     <nav class="navigation">
         <div class="heading">
             <h1><a href="{% url 'store' %}">Pinaka</a></h1>
@@ -36,7 +55,10 @@
                 <li><a href="{% url 'store' %}">Store</a></li>
                 <li><a href="project.html">Categories</a></li>
                 <li><a href="product.html">Products</a></li>
+                <div>
                 <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
+               
+                </div>
                 <button type="button" class="btn btn-primary">Login</button>
             
             </ul> 
