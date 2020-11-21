@@ -44,7 +44,6 @@ function addCookieItem(productId, action){
 	location.reload()
 }
 
-
 function updateUserOrder(productId, action){
 	    console.log('User is authenticated, sending data...')
 
