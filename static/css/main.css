@@ -219,7 +219,7 @@ ion-icon {
     display: none!important;
 }
 
-/*--------------------------- Store ----------------------------------*/
+/*-----x------x-----x---------- Store ----------x---------x------x-------*/
 
 footer{
     background: #f1f1f1;
@@ -326,8 +326,5 @@ footer{
         margin-top: 20px;
     }
 }
-/* catr btn */
-/* #cart-btn{
-    color: aqua;
-    display:none;
-} */
+
+/
