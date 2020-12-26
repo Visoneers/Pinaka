@@ -67,9 +67,10 @@
 		</div>
 	</div>
 </div>
-	<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&disable-funding=credit"></script>
 	
+<script src="https://www.paypal.com/sdk/js?client-id=ARC0AdSMKk-o8-khgchVg7qjXXLlVllLYQQvsM24SxEt62onc5hnnIs_-zD-RpfrYnteoeLa5SXtD4pI&disable-funding=credit"></script>
 	<script>
+		var total = '{{order.get_cart_total}}'
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
 
@@ -83,7 +84,7 @@
 	            return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '1000'
+                            value: parseFloat(total).toFixed(2)
                         }
                     }]
                 });
@@ -92,8 +93,7 @@
             // Finalize the transaction
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    submitFormData()
                 });
             }
 
@@ -131,7 +131,7 @@
 
 		/*
 	    document.getElementById('make-payment').addEventListener('click', function(e){
-	    	submitFormData()
+	    	
 	    })
 	    */
 

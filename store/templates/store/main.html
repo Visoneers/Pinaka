@@ -13,7 +13,7 @@
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/carousel.css' %}">
     
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-
+    <script type="text/javascript" src="{% static 'js/cart.js'%}"></script>
     <script type="text/javascript">var user='{{request.user}}'
     function getCookie(name) {
 		    var cookieValue = null;
@@ -118,7 +118,7 @@
                     <div>
                     <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
                     </div>
-                    <button type="button" class="btn btn-primary">Login</button>
+                    <a href="http://127.0.0.1:8000/admin/"><button type="button" class="btn btn-primary">Login</button></a>
                 </ul> 
             </div>
         </nav>
@@ -164,6 +164,6 @@
      <!-- jQuery and JS bundle w/ Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'js/cart.js'%}"></script>
+
 </body>
 </html>
