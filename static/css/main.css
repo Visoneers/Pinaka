@@ -122,14 +122,7 @@ ion-icon {
     color: red;
     font-size: 14px;
     font-weight: bold;
-    
-}
-.conten{
-    padding-left: 7.5rem;
-}
-#cart-btn{
-    line-height: 10px;
-    margin-block-end: 0em;
+    margin: 0.2rem 78.5rem;
 }
 /*--------x-x-x---------Navigation Menu ----------x-x-x---------------*/
 
@@ -160,10 +153,29 @@ ion-icon {
     left: 15px;
 }
 .product .card .img img{
+    position: relative;
     width: 100%;
     height: 420px;
     border-radius: 4px;
 }
+.img .btn{
+    z-index: 1;
+    position: absolute;
+    top: 22rem;
+    left: 100px;
+    line-height: 20px;
+    margin-block-end: 0em;
+    display: none;
+}
+.card .img:hover img{
+    opacity: 30%;
+}
+.card .img:hover .btn{
+    display: block;
+    animation-name: popup;
+    animation-duration: 1s;
+}
+
 .content{
     display: inline-flex;
     position: relative;
@@ -180,7 +192,13 @@ ion-icon {
     background-color: #fff;
     padding: 10px;
 }
-
+@keyframes popup {
+    0%   {top: 25rem; left: 100px;}
+    /* 25%  {top: 25rem; left: 100px;}
+    50%  {left:200px; top:100px;}
+    75%  {left:0px; top:100px;} */
+    100% {top: 22rem; left: 100px;}
+  }
 
 /*--------x-x-x-------------- Store ----------------x-x-x---------------*/
 
