@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     
     <script type="text/javascript">var user='{{request.user}}'
-    function getCookie(name) {
+    function getToken(name) {
 		    var cookieValue = null;
 		    if (document.cookie && document.cookie !== '') {
 		        var cookies = document.cookie.split(';');
@@ -30,7 +30,7 @@
 		    }
 		    return cookieValue;
 		}
-    var csrftoken = getCookie('csrftoken');
+    var csrftoken = getToken('csrftoken');
     function getCookie(name) {
 		    // Split cookie string and get all individual name=value pairs in an array
 		    var cookieArr = document.cookie.split(";");
@@ -61,8 +61,8 @@
 </head>
 <body>
     <!---------------- navigation menu ------------------------>
-    
     <p id="cart-total">{{cartItems}}</p>
+    
     <!-- <main class="main">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -115,9 +115,10 @@
                     <li><a href="{% url 'store' %}">Store</a></li>
                     <!-- <li><a href="project.html">Categories</a></li>
                     <li><a href="product.html">Products</a></li> -->
-                    <div>
+                    <span>
                     <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
-                    </div>
+                    <p id="cart-total">{{cartItems}}</p>
+                    </span>
                     <a href="http://127.0.0.1:8000/admin/"><button type="button" class="btn btn-primary">Login</button></a>
                 </ul> 
             </div>

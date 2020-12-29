@@ -10,12 +10,10 @@ for (var i=0;i<updateBtns.length; i++){
 
         console.log('USER:',user)
         if(user==='AnonymousUser'){
-			
             console.log('user not logged in')
         }
         else {
-			
-            updateUserOrder(productId,action)
+			 updateUserOrder(productId,action)
         }
         
     })
@@ -66,6 +64,7 @@ function updateUserOrder(productId, action){
 
         .then((data)=>{
         console.log('data',data)
-        location.reload()
+		location.reload()
+		
         })
 }
