@@ -1,12 +1,57 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from django.http import JsonResponse
 import json   
 import datetime
 
+from .forms import CreateUserForm
 from .models import *
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+
 
 #create ur views here
+def registerPage(request):
+    if request.user.is_authenticated:
+        return redirect ('store')
+    else: 
+        form=CreateUserForm()
 
+        if (request.method)=='POST':
+            form=CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
+                user=form.cleaned_data.get('username')
+                messages.success(request, 'account created by '+ user)
+                return redirect('loginPage')
+
+        context={'form':form}
+        return render(request,'store/register.html',context)
+
+def loginPage(request):
+
+    if request.user.is_authenticated:
+        return redirect ('store')
+    else: 
+        if request.method=='POST':
+            username=request.POST.get('username')
+            password=request.POST.get('password')
+
+            user=authenticate(request, username=username,password=password)
+            if user is not None:
+                login(request, user)
+                return  redirect('store')
+            else:
+                messages.info(request,'username or password is incorrect')
+        context={}
+        return render(request,'store/login.html', context)
+
+def logoutUser(request):
+    logout(request)
+    return redirect ('loginPage')
+
+@login_required(login_url='loginPage')
 def store(request):
     if request.user.is_authenticated:
         customer=request.user.customer
@@ -22,6 +67,7 @@ def store(request):
     context={'products':products,'cartItems':cartItems}
     return render(request,'store/store.html',context)
 
+@login_required(login_url='loginPage')
 def cart(request):
 
     if request.user.is_authenticated:
@@ -37,6 +83,7 @@ def cart(request):
     context={'items':items,'order':order,'cartItems':cartItems}
     return render(request,'store/cart.html',context)
 
+@login_required(login_url='loginPage')
 def checkout(request):
     if request.user.is_authenticated:
         customer=request.user.customer
@@ -51,6 +98,7 @@ def checkout(request):
     context={'items':items,'order':order,'cartItems':cartItems}
     return render(request,'store/checkout.html',context)
 
+@login_required(login_url='loginPage')
 def updateItem(request):
     data=json.loads(request.body)
     productId=data['productId']
@@ -76,7 +124,8 @@ def updateItem(request):
         orderItem.delete()
 
     return JsonResponse('Item was added',safe=False)
-
+    s
+@login_required(login_url='loginPage')
 def processOrder(request):
     transaction_id=datetime.datetime.now().timestamp()
     data=json.loads(request.body)

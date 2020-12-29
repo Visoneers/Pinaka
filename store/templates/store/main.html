@@ -103,6 +103,7 @@
                 <h1><a href="{% url 'store' %}">Pinaka</a></h1>
                 <p>FASHION HUB</p>
             </div>
+            <span class="hello-msg">Hello {{request.user}}!!!</span>
             <div>
                 <ul class="nav-menu">
                     <span class="search-box">
@@ -111,14 +112,18 @@
                             <ion-icon id="search-btn" name="search"></ion-icon>
                         </a>
                     </li>
-                </span>
+                    </span>
+
                     <li><a href="{% url 'store' %}">Store</a></li>
                     <!-- <li><a href="project.html">Categories</a></li>
                     <li><a href="product.html">Products</a></li> -->
                     <span>
                     <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
                     </span>
-                    <a href="http://127.0.0.1:8000/admin/"><button type="button" class="btn btn-primary">Login</button></a>
+                    <!-- <a href="http://127.0.0.1:8000/admin/"><button type="button" class="btn btn-primary">Login</button></a> -->
+                   
+                    <span><a class="hello-msg" href="{% url 'logoutUser' %}">Logout</a></span>
+                
                 </ul> 
             </div>
         </nav>
