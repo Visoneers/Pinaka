@@ -1,4 +1,5 @@
 // console.log ("hello world")
+
 var updateBtns=document.getElementsByClassName('update-cart')
 
 for (var i=0;i<updateBtns.length; i++){
@@ -33,7 +34,7 @@ function addCookieItem(productId, action){
 	if (action == 'remove'){
 		cart[productId]['quantity'] -= 1
 
-		if (cart[productId]['quantity'] <= 0){
+		if (cart[productId]['quantity'] < 0){
 			console.log('Item should be deleted')
 			delete cart[productId];
 		}
