@@ -7,5 +7,5 @@ from django.contrib.auth.models import User
 class CreateUserForm(UserCreationForm):
     class meta:
         model= User
-        feilds= ['username','Email address','password1','password2']
+        feilds= ['username','password1','password2']
 

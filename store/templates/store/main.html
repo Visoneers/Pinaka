@@ -103,12 +103,12 @@
                 <h1><a href="{% url 'store' %}">Pinaka</a></h1>
                 <p>FASHION HUB</p>
             </div>
-            <span class="hello-msg">Hello {{request.user}}!!!</span>
+            <span class="hello-msg ">Hello {{request.user}}!!!</span>
             <div>
                 <ul class="nav-menu">
                     <span class="search-box">
                     <li > <input class="input_box" type="text"  placeholder="Search">
-                        <a class="search-btn" href="#" >
+                        <a class="search-btn" href="{% url 'store' %}" >
                             <ion-icon id="search-btn" name="search"></ion-icon>
                         </a>
                     </li>
@@ -122,7 +122,7 @@
                     </span>
                     <!-- <a href="http://127.0.0.1:8000/admin/"><button type="button" class="btn btn-primary">Login</button></a> -->
                    
-                    <span><a class="hello-msg" href="{% url 'logoutUser' %}">Logout</a></span>
+                    <span><a class="hello-msg" id="logout_btn " href="{% url 'logoutUser' %}">Logout</a></span>
                 
                 </ul> 
             </div>

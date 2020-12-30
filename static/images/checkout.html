@@ -1,3 +1,4 @@
+
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
@@ -57,12 +58,12 @@
 				<div class="cart-row">
 					<div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
 					<div style="flex:2"><p>{{item.product.names}} </p></div>
-					<div style="flex:1"><p>{{item.product.price}}</p></div>
+					<div style="flex:1"><p>₹{{item.product.price}}</p></div>
 					<div style="flex:1"><p>{{item.quantity}}</p></div>
 				</div>
 				{% endfor %}
 				<h5>Items: {{order.get_cart_items|floatformat:2}}</h5>
-				<h5>Total: {{order.get_cart_total|floatformat:2}}</h5>
+				<h5>Total:₹{{order.get_cart_total|floatformat:2}}</h5>
 			</div>
 		</div>
 	</div>

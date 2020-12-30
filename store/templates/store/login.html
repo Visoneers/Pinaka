@@ -15,6 +15,9 @@
 			padding: 0;
 			height: 100%;
 			background: #7abecc !important;
+			/* background-image: url('../images/login3.jpg'); */
+			justify-self: center;
+		
 		}
 		.user_card {
 			width: 350px;
@@ -56,7 +59,7 @@
 		}
 		.input-group-text {
 			background: #f7ba5b !important;
-			color: white !important;
+			color: rgb(24, 21, 21) !important;
 			border: 0 !important;
 			border-radius: 0.25rem 0 0 0.25rem !important;
 		}
@@ -68,7 +71,7 @@
 
 		#messages{
 			background-color: grey;
-			color: #fff;
+			color:black;
 			padding: 10px;
 			margin-top: 10px;
 		}
@@ -106,14 +109,14 @@
 					</form>
 
 				</div>
-                {% for message in messages %}
+                <!-- {% for message in messages %}
                 <p id=messages>{{messages}}</p>
-                {% endfor %}
-
-				<div class="mt-4">
+                {% endfor %} -->
+                {{form.errors}}
+				<!-- <div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'registerPage' %}" class="ml-2">Sign Up</a>
-					</div>
+					</div> -->
 			
 				</div>
 			</div>
