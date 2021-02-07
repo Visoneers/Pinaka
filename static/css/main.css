@@ -82,8 +82,9 @@ ion-icon {
     flex-direction: row;
     justify-content: space-between;
     font-size: 1.5rem;
-    padding: 0.8rem 6rem;
-    height: 9vh;
+    padding: 0.1rem 6rem;
+    height: 10vh;
+    width: 100%;
     overflow: hidden;
 }
 .heading{
@@ -107,8 +108,8 @@ ion-icon {
     margin: 0;
     display: flex;
     list-style-type: none;
+    padding-top: 0.7rem;
     font-family: "Demure";
-
 }
 .navigation .nav-menu a{
     padding: 0rem 1.2rem;
