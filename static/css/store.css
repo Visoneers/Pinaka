@@ -1,4 +1,5 @@
-/* carousel */
+/*--------------------------- carousel ----------------------------------*/
+
 .slider{
     position: relative;
   }
@@ -48,8 +49,8 @@
     transform: scale(2.5);
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.205);
 }
+/*--------------------------- categories ----------------------------------*/
 
-/* menu-items */
 .categories{
     display: flex;
     flex-direction: column;
@@ -102,7 +103,7 @@
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
-    opacity: 0.5;
+    opacity: 0.7;
     position: absolute;
 }
 .item-content:hover {
@@ -118,3 +119,78 @@
     font-weight: lighter;
     font-size: 16px;
 }
+/*--------------------------- Store ----------------------------------*/
+
+.product{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    box-sizing: border-box;
+    grid-gap: 30px ;
+    justify-items: center;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+}
+.product .card{
+    position: relative;
+    display: flex;
+    width: 351px;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    padding: 0px;
+}
+.product .card .img{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    top: 10px;
+    left: 15px;
+}
+.product .card .img img{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 4px;
+}
+.img .btn{
+    z-index: 1;
+    position: absolute;
+    top: 22rem;
+    left: 100px;
+    line-height: 20px;
+    margin-block-end: 0em;
+    display: none;
+}
+.card .img:hover img{
+    opacity: 30%;
+}
+.card .img:hover .btn{
+    display: block;
+    animation-name: popup;
+    animation-duration: 1s;
+}
+.content{
+    display: inline-flex;
+    position: relative;
+    padding: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.content h1, .content .price{
+    font-size: 1.6rem;
+} 
+.box-element{
+    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px;
+}
+@keyframes popup {
+    0%   {top: 25rem; left: 100px;}
+    /* 25%  {top: 25rem; left: 100px;}
+    50%  {left:200px; top:100px;}
+    75%  {left:0px; top:100px;} */
+    100% {top: 22rem; left: 100px;}
+  }
+
+/*--------x-x-x-------------- Store ----------------x-x-x---------------*/

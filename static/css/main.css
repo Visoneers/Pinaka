@@ -6,6 +6,7 @@ html, body {
     width: 100%;
     height: 100vh;
     font-family: 'Open Sans Condensed';
+    /* font-family: "Demure"; */
 }
 /*------------------- Global --------------------------------*/
 a, a:hover{
@@ -77,39 +78,36 @@ ion-icon {
     width: 100%;
 }
 .navigation{
-    z-index: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    padding: 0.1rem 6rem;
-    height: 10vh;
+    height: 11vh;
     width: 100%;
+    padding: 0.5rem 1rem;
     overflow: hidden;
 }
-.heading{
-    display: block;
-    font-family: "Demure";
-    font-size: 1.3rem;
-    letter-spacing: 3px;
+.navigation .dropdownmenu{
+    width: 60px;
+    height: 100%;
+    padding: 20px;
+    cursor: pointer;
 }
-.heading h1{
-    font-size: 1.8rem;
-    margin-block-end: 0em;
-    font-weight: bold;
+.navigation .logo{
+    width: 15%;
+    align-items: center;
+    cursor: pointer;
 }
-.heading p{
-    font-size: 0.7rem;
-    letter-spacing: 4.5px;
-    margin-block-start: 0em;
-    font-weight: lighter;
+.navigation .logo img{
+    width: 100px;
+    height: 100%;
+    padding-left: 1rem;
 }
 .navigation .nav-menu{
     margin: 0;
-    display: flex;
+    width: 85%;
+    height: 100%;
     list-style-type: none;
-    padding-top: 0.7rem;
-    font-family: "Demure";
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .navigation .nav-menu a{
     padding: 0rem 1.2rem;
@@ -117,26 +115,22 @@ ion-icon {
     position: relative;
     font-weight: bold;
 }
-#cart-total{
-    display: block;
+.nav-menu .cart-icon{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu .cart-icon .item-count{
     position: absolute;
-    color: red;
     font-size: 14px;
     font-weight: bold;
-    top:0.2rem;
-    left:1240px;
-    
-    
+    padding-top: 4px;
+    padding-right: 27px;
 }
 
 /* logout-login start*/
-.hello-msg{
-    font-size: 18px;
-    color:black;
-    margin-right:20px;
 
-
-}
 .user_card {
     width: 350px;
     margin-top: auto;
@@ -202,81 +196,7 @@ ion-icon {
 }
 /*--------x-x-x---------Navigation Menu ----------x-x-x---------------*/
 
-/*--------------------------- Store ----------------------------------*/
 
-.product{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    box-sizing: border-box;
-    grid-gap: 30px ;
-    justify-items: center;
-    width: 100%;
-}
-.product .card{
-    position: relative;
-    display: flex;
-    width: 351px;
-    flex-direction: column;
-    transition: 0.3s ease-in-out;
-    padding: 0px;
-}
-.product .card .img{
-    position: relative;
-    width: 320px;
-    height: 440px;
-    top: 10px;
-    left: 15px;
-}
-.product .card .img img{
-    position: relative;
-    width: 100%;
-    height: 420px;
-    border-radius: 4px;
-}
-.img .btn{
-    z-index: 1;
-    position: absolute;
-    top: 22rem;
-    left: 100px;
-    line-height: 20px;
-    margin-block-end: 0em;
-    display: none;
-}
-.card .img:hover img{
-    opacity: 30%;
-}
-.card .img:hover .btn{
-    display: block;
-    animation-name: popup;
-    animation-duration: 1s;
-}
-
-.content{
-    display: inline-flex;
-    position: relative;
-    padding: 8px;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.content h1, .content .price{
-    font-size: 1.6rem;
-} 
-.box-element{
-    box-shadow:hsl(0, 0%, 80%) 0 0 16px;
-    border-radius: 4px;
-    background-color: #fff;
-    padding: 10px;
-}
-@keyframes popup {
-    0%   {top: 25rem; left: 100px;}
-    /* 25%  {top: 25rem; left: 100px;}
-    50%  {left:200px; top:100px;}
-    75%  {left:0px; top:100px;} */
-    100% {top: 22rem; left: 100px;}
-  }
-
-/*--------x-x-x-------------- Store ----------------x-x-x---------------*/
 
 .thumbnail{
 	width: 100%;
@@ -285,9 +205,7 @@ ion-icon {
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
 }
-.product{
-	border-radius: 0 0 4px 4px;
-}
+
 .cart-row{
     display: flex;
     align-items: flex-stretch;
@@ -321,7 +239,6 @@ ion-icon {
     display: none!important;
 }
 
-/*-----x------x-----x---------- Store ----------x---------x------x-------*/
 
 footer{
     background: #f1f1f1;
@@ -335,6 +252,22 @@ footer{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap-reverse;
+}
+.heading{
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+.heading h1{
+    font-size: 1.8rem;
+    margin-block-end: 0em;
+    font-weight: bold;
+}
+.heading p{
+    font-size: 0.7rem;
+    letter-spacing: 4.5px;
+    margin-block-start: 0em;
+    font-weight: lighter;
 }
 .social-media{
     margin: 20px 0;

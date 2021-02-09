@@ -68,34 +68,28 @@
 </head>
 <body>
     <!---------------- navigation menu ------------------------>
-    <p id="cart-total">{{cartItems}}</p>
-    <div claas="web">
-        <nav class="navigation">
-            <!-- <div class="heading">
-                <h1><a href="{% url 'store' %}">Pinaka</a></h1>
-                <p>FASHION HUB</p>
-            </div> -->
-           
-            <img src="{% static 'images/sample.png' %}">
-           
-            <div>
-                <ul class="nav-menu">
-                    <span class="search-box">
-                    <li > <input class="input_box" type="text"  placeholder="Search">
-                        <a class="search-btn" href="{% url 'store' %}" >
-                            <ion-icon id="search-btn" name="search"></ion-icon>
-                        </a>
-                    </li>
-                    </span>
-                    <li><a href="{% url 'store' %}">Products</a></li>
-                    <span>
-                    <li><a href="{% url 'cart' %}"><ion-icon name="cart-outline"></ion-icon>Cart</ion-icon></a></li>
-                    </span>
-                    <span><a class="hello-msg" id="logout_btn " href="{% url 'logoutUser' %}">Logout</a></span>
-                </ul> 
+    <nav class="navigation">
+        <span class="far fa-bars fa-2x dropdownmenu"></span>
+        <div class="logo">
+            <a href="{% url 'store' %}"><img src="{% static 'images/sample.png' %}"></a>
+        </div>
+        <ul class="nav-menu">
+            <span class="search-box">
+                <li > <input class="input_box" type="text"  placeholder="Search">
+                    <a class="search-btn" href="{% url 'store' %}" >
+                        <ion-icon id="search-btn" name="search"></ion-icon>
+                    </a>
+                </li>
+            </span>
+            <li><a href="{% url 'store' %}">Products</a></li>
+            <div class="cart-icon">
+                <span class='item-count'>{{cartItems}}</span>
+                <a href="{% url 'cart' %}"><i class="fal fa-shopping-bag fa-lg"></i> Cart</a>
             </div>
-        </nav>
-    </div>
+            <span><a class="hello-msg" id="logout_btn " href="{% url 'logoutUser' %}">Logout</a></span>
+        </ul> 
+    </nav>
+
     <div class="container-fluid p-0">
         {% block content %}
        
