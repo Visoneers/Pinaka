@@ -64,7 +64,8 @@ def store(request):
         cartItems=order['get_cart_items']
 
     products=Product.objects.all()
-    context={'products':products,'cartItems':cartItems}
+    categories = Categorie.objects.all()
+    context={'categories':categories, 'products':products,'cartItems':cartItems}
     return render(request,'store/store.html',context)
 
 @login_required(login_url='loginPage')

@@ -22,21 +22,34 @@
         </div>
     </div>
 </main>
-
+<br>
+<style>
+    .menuitem .background-image{
+        height: 100%;
+        width: 100%;
+        background-image: url("{{categories.imageURL}}");
+        background-size: cover;
+        background-position: center;
+    }
+</style>
 <div class="categories">
-    <div class='menuitem'>
-        <div class='background-images'></div>
-            <div className='content1'>
-                <div className='title'>Shirt</div>
-                <span className='subtitle'>SHOP NOW</span>
+    <h2>Categories</h2>
+    <div class="menu">
+        {% for categories in categories %}
+        <div class='menuitem {{categories.size}}'>
+            <div class='background-images' style="background-image: url('{{categories.imageURL}}');"></div>
+            <div class='item-content'>
+                <div class='title'>{{categories.title}}</div>
+                <span class='subtitle'>SHOP NOW</span>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
-
-
-
+    
+<br>
 <div class="container">
+    <h2>Bestseller</h2>
     <div class="product">
         {% for product in products %}
         <div class="box-element card">
@@ -52,4 +65,5 @@
         {% endfor %}
     </div>   
 </div>
+
 {% endblock content %}

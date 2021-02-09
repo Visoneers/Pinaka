@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.base import Model
 # Create your models here.
 
 class Customer(models.Model):
@@ -10,6 +11,22 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.name
+class Categorie(models.Model):
+    sizes = (('small','small'),('large','large'))
+    title = models.CharField(max_length=50,null=False)
+    image = models.ImageField(null=True,blank=True)
+    size = models.CharField(max_length=5,choices=sizes,default='small')
+    def __str__(self):       
+        return self.title
+
+    @property 
+    def imageURL(self):
+        try:
+            url=self.image.url #chk
+        except:
+            url=' '
+        return url
+
 
 class Product(models.Model):
     name=models.CharField(max_length=200,null=True)

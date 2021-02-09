@@ -52,7 +52,7 @@ def cartData(request):
         order = cookieData['order']
         items = cookieData['items']
 
-    return{'cartItems':cartItems, 'order':order, 'items':items}
+    return{'cartItems': cartItems, 'order':order, 'items':items}
 
 def guestOrder(request, data):
     print('user not logged in...')
