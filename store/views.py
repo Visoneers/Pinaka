@@ -5,10 +5,11 @@ import datetime
 
 from .forms import CreateUserForm
 from .models import *
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import PasswordResetForm, UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .filters import productFilter
 
 
 #create ur views here
@@ -52,6 +53,7 @@ def logoutUser(request):
     return redirect ('loginPage')
 
 @login_required(login_url='loginPage')
+
 def store(request):
     if request.user.is_authenticated:
         customer=request.user.customer
@@ -63,10 +65,51 @@ def store(request):
         order={'get_cart_total':0,'get_cart_items':0,'shipping':False}
         cartItems=order['get_cart_items']
 
-    products=Product.objects.all()
+    products=Product.objects.all()[:6]
     categories = Categorie.objects.all()
     context={'categories':categories, 'products':products,'cartItems':cartItems}
     return render(request,'store/store.html',context)
+
+def category(request):
+    categoryId = request.GET.get('category')
+    print(request.GET)
+    if categoryId is not None:
+        products = Product.objects.filter(category = categoryId)
+    else:
+        products = Product.objects.all()
+
+    if request.user.is_authenticated:
+        customer=request.user.customer
+        order,created=Order.objects.get_or_create(customer=customer,complete=False)
+        items=order.orderitem_set.all()
+        cartItems=order.get_cart_items
+    else:
+        items=[]
+        order={'get_cart_total':0,'get_cart_items':0,'shipping':False}
+        cartItems=order['get_cart_items']
+
+    context={'products':products,'cartItems':cartItems}
+
+    return render(request,'store/category.html',context)
+    
+def product(request):   
+    product = Product.objects.all()
+    product_filter = productFilter(request.GET,queryset=product)
+    products = product_filter.qs
+    
+    if request.user.is_authenticated:
+        customer=request.user.customer
+        order,created=Order.objects.get_or_create(customer=customer,complete=False)
+        items=order.orderitem_set.all()
+        cartItems=order.get_cart_items
+    else:
+        items=[]
+        order={'get_cart_total':0,'get_cart_items':0,'shipping':False}
+        cartItems=order['get_cart_items']
+    
+    cartItems=order.get_cart_items
+    context = {'product_filter':product_filter,'products':products,'cartItems':cartItems}
+    return render(request,'store/product.html',context)
 
 @login_required(login_url='loginPage')
 def cart(request):

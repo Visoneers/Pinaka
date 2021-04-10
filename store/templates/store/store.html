@@ -24,14 +24,14 @@
 </main>
 <br>
 <div class="categories">
-    <h2>Categories</h2>
+    <h2>Categories</a></h2>
     <div class="menu">
-        {% for categories in categories %}
-        <div class='menuitem {{categories.size}}'>
-            <div class='background-images' style="background-image: url('{{categories.imageURL}}');"></div>
+        {% for category in categories %}
+        <div class='menuitem {{category.size}}'>
+            <div class='background-images' style="background-image: url('{{category.imageURL}}');"></div>
             <div class='item-content'>
-                <div class='title'>{{categories.title}}</div>
-                <span class='subtitle'>SHOP NOW</span>
+                <div class='title'>{{category.title}}</div>
+                <span class='subtitle'><a href="category/?category={{category.id}}">SHOP NOW</a></span>
             </div>
         </div>
         {% endfor %}
@@ -44,16 +44,16 @@
         {% for product in products %}
         <div class="box-element card">
             <div class="img">
-                <button data-product={{product.id}} data-action="add" class="btn btn-success add-btn  update-cart" id="cart-btn" >Add to cart</button>
                 <img src="{{product.imageURL}}" alt="Network Problem">
             </div>
+            <button data-product={{product.id}} data-action="add" class="btn-success add-btn  update-cart">ADD TO CART</button>
             <div class="content">
                 <h1>{{product.name}}</h1>
                 <span class="price">₹{{product.price|floatformat:2}}</span>   
             </div>
         </div>
         {% endfor %}
-    </div>   
+    </div>
 </div>
 
 {% endblock content %}

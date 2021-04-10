@@ -13,7 +13,7 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
-    <!-- carousel -->
+    <!-- carousel  CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel = "stylesheet" type = "text/css" href = "{% static 'css/store.css' %}">
     <!-- fontAwesome -->
@@ -81,7 +81,7 @@
                     </a>
                 </li>
             </span>
-            <li><a href="{% url 'store' %}">Products</a></li>
+            <li><a href="{% url 'product' %}">Products</a></li>
             <div class="cart-icon">
                 <span class='item-count'>{{cartItems}}</span>
                 <a href="{% url 'cart' %}"><i class="fal fa-shopping-bag fa-lg"></i> Cart</a>
@@ -96,6 +96,7 @@
         {% endblock content %}
     </div>
     <br><br>
+    
     <!--------------------- footer ------------------------>
     <footer>
         <div class="footer">
