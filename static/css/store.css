@@ -13,15 +13,15 @@
     border-radius: 10rem;
     margin: 0rem 1rem;
     opacity: 1;
+    cursor: pointer;
     transition: opacity 1s ease;
 }
-.slider:hover .slider-btn .prev, .slider:hover .slider-btn .next{
-    opacity: 1;
+.slider-btn:hover .prev,.slider-btn:hover .next{
+    opacity: 0.7;
 } 
 .right-0{
     right: 0;
 }
-
 .slick-dots{
     display: flex;
     justify-content: center;
@@ -49,6 +49,8 @@
     transform: scale(2.5);
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.205);
 }
+/*--------x-x-x------------- carousel ----------------x-x-x--------------*/
+
 /*--------------------------- categories ----------------------------------*/
 
 .categories{
@@ -103,7 +105,7 @@
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
-    opacity: 0.7;
+    opacity: 0.8;
     position: absolute;
 }
 .item-content:hover {
@@ -119,10 +121,12 @@
     font-weight: lighter;
     font-size: 16px;
 }
+
+/*--------x-x-x------------- categories ----------------x-x-x--------------*/
+
 /*--------------------------- Store ----------------------------------*/
 
 .product{
-    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     box-sizing: border-box;
@@ -132,43 +136,45 @@
     border-radius: 0 0 4px 4px;
 }
 .product .card{
-    position: relative;
     display: flex;
-    width: 351px;
     flex-direction: column;
-    transition: 0.3s ease-in-out;
-    padding: 0px;
+    width: 350px;
 }
 .product .card .img{
     position: relative;
-    width: 320px;
-    height: 440px;
-    top: 10px;
-    left: 15px;
+    background-size: cover;
+    background-position: center;
 }
 .product .card .img img{
-    position: relative;
     width: 100%;
     height: 420px;
-    border-radius: 4px;
 }
-.img .btn{
-    z-index: 1;
-    position: absolute;
-    top: 22rem;
-    left: 100px;
-    line-height: 20px;
-    margin-block-end: 0em;
+.product .card .add-btn{
     display: none;
+    opacity: 0.85;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    font-size: larger;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    left: 100px;
+    top: 350px;
+    border-color: black;
 }
-.card .img:hover img{
-    opacity: 30%;
+.card:hover .img{
+    opacity: 0.8;
 }
-.card .img:hover .btn{
+.card:hover .add-btn{
+    opacity: 0.85;
     display: block;
-    animation-name: popup;
-    animation-duration: 1s;
 }
+.add-btn:hover {
+    background-color: black;
+    color: white;
+}
+
 .content{
     display: inline-flex;
     position: relative;
@@ -185,12 +191,5 @@
     background-color: #fff;
     padding: 10px;
 }
-@keyframes popup {
-    0%   {top: 25rem; left: 100px;}
-    /* 25%  {top: 25rem; left: 100px;}
-    50%  {left:200px; top:100px;}
-    75%  {left:0px; top:100px;} */
-    100% {top: 22rem; left: 100px;}
-  }
 
-/*--------x-x-x-------------- Store ----------------x-x-x---------------*/
+/*--------x-x-x------------- Store ----------------x-x-x--------------*/

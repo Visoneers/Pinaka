@@ -1,0 +1,32 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}  
+<div class="container">
+    <br><br>
+    <h2>All Products</h2>
+    <br>
+    <form method="get">
+        {{product_filter.form}}
+        <span>Max:<input type="number" id="maxprice" min="0" max="1000" onkeyup="rangeInput.value=this.value"/></span>
+        <input type="range" id="rangeInput" min="0" max="1000" oninput="maxprice.value=this.value"/>
+        <button class="btn" type="submit">search</button>
+    </form>
+    <br>
+    <div class="product">
+        {% for product in products %}
+        <div class="box-element card">
+            <div class="img">
+                <img src="{{product.imageURL}}" alt="Network Problem">
+            </div>
+            <button data-product={{product.id}} data-action="add" class="btn-success add-btn  update-cart">ADD TO CART</button>
+            <div class="content">
+                <h1>{{product.name}}</h1>
+                <span class="price">₹{{product.price|floatformat:2}}</span>   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
