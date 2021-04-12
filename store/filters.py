@@ -6,5 +6,5 @@ class productFilter(django_filters.FilterSet):
     class Meta:
         model = Product
         fields = '__all__'
-        exclude =['name','image','price']
+        exclude =['name','image','price','digital']
         
