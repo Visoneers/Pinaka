@@ -7,9 +7,7 @@
     <br>
     <form method="get">
         {{product_filter.form}}
-        <span>Max:<input type="number" id="maxprice" min="0" max="1000" onkeyup="rangeInput.value=this.value"/></span>
-        <input type="range" id="rangeInput" min="0" max="1000" oninput="maxprice.value=this.value"/>
-        <button class="btn" type="submit">search</button>
+        <button class="btn btn-success" type="submit">search</button>
     </form>
     <br>
     <div class="product">
