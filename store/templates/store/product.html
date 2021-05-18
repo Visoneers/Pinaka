@@ -15,11 +15,12 @@
         <div class="box-element card">
             <div class="img">
                 <img src="{{product.imageURL}}" alt="Network Problem">
-            </div>
+            <h3 class="size">{{product.size}}</h3>
+        </div>
             <button data-product={{product.id}} data-action="add" class="btn-success add-btn  update-cart">ADD TO CART</button>
             <div class="content">
                 <h1>{{product.name}}</h1>
-                <H3>{{product.size}}</H3>
+                
                 <span class="price">₹{{product.price|floatformat:2}}</span>   
             </div>
         </div>
