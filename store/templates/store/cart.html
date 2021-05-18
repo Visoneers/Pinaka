@@ -29,6 +29,7 @@
                     <div style="flex:2"></div>
                     <div style="flex:2">Item</div>
                     <div style="flex:1">Price</div>
+                    <div style="flex:1">size</div>
                     <div style="flex:1">Quantity</div>
                     <div style="flex:1">Total</div>
                 </div> 
@@ -37,6 +38,7 @@
                     <div style="flex:2"><img class="row-image"src="{{item.product.imageURL}}"></div>
                     <div style="flex:2">{{item.product.name}}</div>
                     <div style="flex:1">₹{{item.product.price|floatformat:2}}</div>
+                    <div style="flex:2">{{item.product.size}}</div>
                     <div style="flex:1">
                         <p class="quantity">{{item.quantity}}</p>
                         <div class="quantity">

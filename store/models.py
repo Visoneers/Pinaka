@@ -29,10 +29,31 @@ class Categorie(models.Model):
         return url
 
 
+class size(models.Model):
+    title=models.CharField(max_length=10)
+
+    def __str__(self):
+        return (self.title)
+
+class color(models.Model):
+    title=models.CharField(max_length=10)
+
+    def __str__(self):
+        return (self.title)
+
+class brand(models.Model):
+    title=models.CharField(max_length=10)
+
+    def __str__(self):
+        return (self.title)
+
 class Product(models.Model):
     name=models.CharField(max_length=200,null=True)
     category=models.ForeignKey(Categorie,on_delete=models.SET_NULL,blank=True,null=True)
     price=models.FloatField()
+    brand=models.ForeignKey(brand,on_delete=models.CASCADE)
+    size=models.ForeignKey(size,on_delete=models.CASCADE)
+    color=models.ForeignKey(color,on_delete=models.CASCADE)
     digital=models.BooleanField(default=False,null=True,blank=False)
     image=models.ImageField(null=True,blank=True)
 
