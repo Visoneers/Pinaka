@@ -163,6 +163,7 @@
     top: 350px;
     border-color: black;
 }
+
 .card:hover .img{
     opacity: 0.8;
 }
@@ -191,5 +192,23 @@
     background-color: #fff;
     padding: 10px;
 }
-
+.product .card .size {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    font-family: ubuntu;
+    font-size: larger;
+    font-weight: bold;
+    background-color: rgb(202, 188, 188);
+    color: black;
+    /* border: solid black; */
+    border-radius: 50%;
+    right: 10px;
+    bottom: 1px;
+    position: absolute;
+    justify-content: center;
+    /* align-self: center; */
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0);
+}
 /*--------x-x-x------------- Store ----------------x-x-x--------------*/
