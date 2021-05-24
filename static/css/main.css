@@ -19,59 +19,19 @@ ion-icon {
 }
 
 /*-------------------Navigation Menu --------------------------------*/
-  
-/* -------------search box------------------ */
-
-.search-box{
+  /* hellomsg */
+.hi-msg{
+    display: flex;
+    top: 13px;
     position: relative;
-    top: 35px;
-    left: -10px;
-    transform: translate(0,-100%);
-    height:35px;
-    background:rgba(255, 255, 255, 0);
-    /* background: darkgrey; */
-    border-radius:3px;
-    padding:10px;   
-}
- .input_box{
-    height: 25px;
-    background: none;
-    border: none;
-    outline:none;
-    float:left;
-    padding-right: 2px;
-    color:black;
-    font-size: 16px;
-    transition: 0.4s all;
-    line-height: 2px;
-    width:0px;
-    }
-#search-btn{
-    right:0px;
-    padding-right:2px;
-}
-.search-btn{
-    top: -7px;
-    color: #2a71f5;
-    float: right;
-    width: 35px;
-    height: 32px;
+    height: calc(1.5em + .75rem + 2px);
+    width: 15rem;
+    background-color: #454545;
+    color: whitesmoke;
     justify-content: center;
-    line-height: 42px;
-    /* width: fit-content; */
-    text-align: center;
-    border-radius: 50%;
-}
-.search-box:hover .input_box{
-    background-color:rgba(255, 255, 255, 0);
-    width: 240px;
-    padding:0px,0px;
-}
-.search-box:hover .search-btn{
-    background-color: rgba(255, 255, 255, 0);
+    align-items:center;
 }
 
-/*------x-x-x-------Search-box --------x-x-x----------*/
 .main{
     display: block;
     height: 120vh;
@@ -83,6 +43,11 @@ ion-icon {
     width: 100%;
     padding: 0.5rem 1rem;
     overflow: hidden;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.navigation::before{
+    opacity: 0.5;
 }
 .navigation .dropdownmenu{
     width: 60px;

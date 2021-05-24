@@ -12,4 +12,5 @@ urlpatterns=[
     path('register/',views.registerPage,name="registerPage"),
     path('login/',views.loginPage,name="loginPage"),
     path('logout/',views.logoutUser,name="logoutUser"),
+    path('search',views.search,name="Search"),
 ]

@@ -1,0 +1,29 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <br><br>
+   
+	<h3 class="my-4 border-bottom pb-1"><span class="text-muted">Search result for</span> {{request.GET.search}}</h3>
+    <br>
+
+    <div class="product">
+        {%  for product in data%}
+        <div class="box-element card">
+            <div class="img">
+                <img src="{{product.imageURL}}" alt="Network Problem">
+            <h3 class="size">{{product.size}}</h3>
+        </div>
+            <button data-product={{product.id}} data-action="add" class="btn-success add-btn  update-cart">ADD TO CART</button>
+            <div class="content">
+                <h1>{{product.name}}</h1>
+                
+                <span class="price">₹{{product.price|floatformat:2}}</span>   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}
+

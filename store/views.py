@@ -1,8 +1,8 @@
 from django.shortcuts import render ,redirect
 from django.http import JsonResponse
-import json   
+import json  ,math 
 import datetime
-
+from django.db.models import Q
 from .forms import CreateUserForm
 from .models import *
 from django.contrib.auth.forms import PasswordResetForm, UserCreationForm
@@ -69,6 +69,8 @@ def store(request):
     categories = Categorie.objects.all()
     context={'categories':categories, 'products':products,'cartItems':cartItems}
     return render(request,'store/store.html',context)
+
+
 
 def category(request):
     categoryId = request.GET.get('category')
@@ -198,3 +200,9 @@ def processOrder(request):
         print('User is not logged in..')
 
     return JsonResponse('Payment complete!',safe=False)
+
+def search(request):
+	q=request.GET['search']
+    
+	data=Product.objects.filter(name__icontains=q)
+	return render(request,'store/search.html',{'data':data})
