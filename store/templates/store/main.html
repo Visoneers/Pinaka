@@ -101,10 +101,32 @@
                 <span class='item-count'>{{cartItems}}</span>
                 <a href="{% url 'cart' %}"><i class="fal fa-shopping-bag fa-lg "></i> Cart</a>
             </div>
-            <li><a class="hello-msg btn btn-danger" id="logout_btn " href="{% url 'logoutUser' %}"
-                    style="height:2rem">Logout</a></li>
+            <li><button class="hello-msg btn btn-danger" id="logout_btn " data-target="#exampleModal" data-toggle="modal"
+                style="height:2rem">Logout</button></li>
         </ul>
     </nav>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirm Logout</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Do you really want to log out? 
+              Your Login details will be saved
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a type="button" class="btn btn-primary" href="{% url 'logoutUser' %}">Confirm Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div class="container-fluid p-0">
         {% block content %}
@@ -128,7 +150,7 @@
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <p class="rights-text">© 2020 Created By Visoneers All Rights Reserved.</p>
+                <p class="rights-text">© 2021 Created By Visoneers All Rights Reserved.</p>
             </div>
             <div class="right-col">
                 <h1>Our Newsletter</h1>
@@ -141,7 +163,7 @@
             </div>
         </div>
     </footer>
-    <!----x-----x------x--- footer ------x------x------x--->
+    <!----x-----x------x------ footer ------x------x------x--->
 
 
 

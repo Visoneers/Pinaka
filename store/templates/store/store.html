@@ -35,13 +35,14 @@
         <div class='menuitem {{category.size}}'>
             <div class='background-images' style="background-image: url('{{category.imageURL}}');"></div>
             <div class='item-content'>
+                <a href="category/?category={{category.id}}">
                 <div class='title'>{{category.title}}</div>
-                <span class='subtitle'><a href="category/?category={{category.id}}">SHOP NOW</a></span>
+                <span class='subtitle'>SHOP NOW</span></a>
             </div>
         </div>
         {% endfor %}
     </div>
-</div>  
+</div>
 <br>
 <div class="container">
     <h2>Bestseller</h2>

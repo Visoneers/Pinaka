@@ -111,6 +111,7 @@
 }
 .item-content:hover {
     opacity: 1;
+    transition: 0.4s;
 }
 .item-content .title{
     font-weight: bold;
@@ -122,6 +123,7 @@
     font-weight: lighter;
     font-size: 16px;
 }
+
 
 /*--------x-x-x------------- categories ----------------x-x-x--------------*/
 
