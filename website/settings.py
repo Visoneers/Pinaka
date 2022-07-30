@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'zue+*ci!88_d^yv&$_980+s&vtnhxb2!z_sa^4=-fe7x$elfwm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['pinaka-ecommerce.herokuapp.com']
 
