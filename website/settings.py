@@ -1,3 +1,6 @@
+import django_heroku
+
+
 """
 Django settings for website project.
 
@@ -23,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'zue+*ci!88_d^yv&$_980+s&vtnhxb2!z_sa^4=-fe7x$elfwm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pinaka-ecommerce.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -129,3 +132,5 @@ STATICFILES_DIRS = [
 MEDIA_URL='/images/'
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+
+django_heroku.settings(locals())
