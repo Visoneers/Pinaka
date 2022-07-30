@@ -15,7 +15,7 @@ venv/Scripts/activate
 ```
 and on git:
 ```
-source env/bin/active
+source venv/Scripts/activate
 ```
 if their is error like **scripts is enable in this system** then you need to follow the following steps
 <br>
