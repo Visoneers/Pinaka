@@ -1,7 +1,7 @@
 
 
 
-https://user-images.githubusercontent.com/65885986/182028082-cc1c6741-965e-4faf-b5e4-af509a63cd8d.mp4
+https://github.com/Visoneers/Pinaka/releases
 
 
 
@@ -39,18 +39,18 @@ Enter on your keyboard.
 3. To ensure that the script execution policy has been changed, use the " Get-ExecutionPolicy " comand 
 again. PowerShell should return a value of ``` Unrestricted ```.
 <br>
-Then install the project dependencies with All the required library are mentioned in requirements.txt
-We can use requirements.txt to install library using command
+Then install the project dependencies with All the required library are mentioned in https://github.com/Visoneers/Pinaka/releases
+We can use https://github.com/Visoneers/Pinaka/releases to install library using command
 
 ```
-pip install -r requirements.txt
+pip install -r https://github.com/Visoneers/Pinaka/releases
 ```
 this will install all the library mentioned.
 
 Now you can run the project with this command
 
 ```
-python manage.py runserver
+python https://github.com/Visoneers/Pinaka/releases runserver
 ```
 
 **Note** if you want payments to work you will need to enter your own Stripe API keys into the `.env` file in the settings files.
